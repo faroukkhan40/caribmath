@@ -28,5 +28,5 @@ get_header();
 	</div><!-- #primary -->
 
 <?php
-
+get_sidear();
 get_footer();

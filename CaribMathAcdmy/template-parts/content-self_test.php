@@ -7,7 +7,7 @@
  * @package CaribbeanMathAcademy
  */
 
-get_header();
+
 ?>
 
 	
