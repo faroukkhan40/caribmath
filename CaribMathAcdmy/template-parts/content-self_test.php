@@ -21,7 +21,7 @@ get_header();
             
                     the_title();
                     echo '<div class="entry-content">';
-                    the_content();
+                            the_content();
                     echo '</div>';
                
 			the_post_navigation();
@@ -35,5 +35,5 @@ get_header();
 	</div><!-- #primary -->
 
 <?php
-
+get_sidear();
 get_footer();
