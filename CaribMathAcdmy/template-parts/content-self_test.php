@@ -12,17 +12,18 @@
 
 	
 	<?php
-	      $args = array( 'post_type' => 'self_test', 'posts_per_page' => 10 );
-           $loop = new WP_Query( $args );
-while ( $loop->have_posts() ) : $loop->the_post();
-	the_title();
-	echo '<div class="entry-content self-test">';
-	      the_content();
-	echo '</div>';
-endwhile;
-wp_reset_postdata();
-the_post_navigation();
-	
+				$args = array( 'post_type' => 'self_test', 'posts_per_page' => 10 );
+				$loop = new WP_Query( $args );
+				
+				while ( $loop->have_posts() ) : $loop->the_post();
+					the_title();
+					echo '<div class="entry-content self-test">';
+						the_content();
+					echo '</div>';
+				endwhile;
+				wp_reset_postdata();
+				the_post_navigation();
+					
 ?>
 	
 	
