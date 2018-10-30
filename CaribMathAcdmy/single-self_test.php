@@ -10,7 +10,7 @@
 get_header();
 ?>
 
-	<div id="primary" class="content-area">
+	<div id="primary" class="content-area" style="border:2px solid purple;width:70%;float:left;clear:both;margin:2px;">
 		<main id="main" class="site-main">
              single-self_test.php
 		<?php

@@ -749,8 +749,8 @@ a {
     .site-content {
       padding: 2em; } }
 
+/* $size__max-width: 1080px max-width: $size__max-width;*/
 .site-content {
-  max-width: 1080px;
   margin: 0 auto; }
 
 /* Single posts */
