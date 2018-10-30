@@ -402,6 +402,51 @@ mark, ins {
 big {
   font-size: 125%; }
 
+/*
+ * Theme Name: CaribbeanMathAcademy
+ *
+ * Layout: Sidebar-Content Sidear to the Left/Right
+ *
+ * Learn more: https://developer.wordpress.org/themes/basics/template-files/
+*/
+.site-content {
+  width: 100%; }
+
+.content-area {
+  float: right;
+  margin: 0 0 0 -25%;
+  width: 100%; }
+
+.site-main {
+  margin: 0 0 0 25%;
+  overflow: hidden; }
+
+#primary.content-area {
+  float: left;
+  width: 75%; }
+
+.site-content .widget-area {
+  float: left;
+  overflow: hidden;
+  width: 25%; }
+
+.site-footer {
+  clear: both;
+  width: 100%; }
+
+.no-sidebar .content-area {
+  float: none;
+  margin-left: auto;
+  margin-right: auto; }
+
+.no-sidebar.site-main {
+  margin-right: 0; }
+
+#secondary.widget-area {
+  float: right;
+  width: 25%;
+  border: 2px solid blue; }
+
 /*--------------------------------------------------------------
 # Elements
 --------------------------------------------------------------*/
@@ -741,6 +786,18 @@ a {
   display: block; }
 
 /*--------------------------------------------------------------
+## widgets
+--------------------------------------------------------------*/
+.widget {
+  margin: 0 0 1.5em;
+  /* Make sure select elements fit in widgets. textwidget*/ }
+  .widget select {
+    max-width: 100%; }
+
+.widget-title {
+  color: purple; }
+
+/*--------------------------------------------------------------
 # Gloal layouts
 --------------------------------------------------------------*/
 .site-content {
@@ -789,9 +846,12 @@ a {
 --------------------------------------------------------------*/
 .widget {
   margin: 0 0 1.5em;
-  /* Make sure select elements fit in widgets. */ }
+  /* Make sure select elements fit in widgets. textwidget*/ }
   .widget select {
     max-width: 100%; }
+
+.widget-title {
+  color: purple; }
 
 /*--------------------------------------------------------------
 # Infinite scroll

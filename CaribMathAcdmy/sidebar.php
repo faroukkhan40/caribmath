@@ -12,6 +12,6 @@ if ( ! is_active_sidebar( 'sidebar-1' ) ) {
 }
 ?>
 
-<aside id="secondary" class="widget-area" style="border:2px solid blue;float:left;margin:2px;">
+<aside id="secondary" class="widget-area" tyle="border:2px solid blue;float:left;margin:2px;">
 	<?php dynamic_sidebar( 'sidebar-1' ); ?>
 </aside><!-- #secondary -->
