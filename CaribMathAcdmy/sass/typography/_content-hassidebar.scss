@@ -45,8 +45,9 @@
 .no-sidebar.site-main {
 	margin-right: 0;
 }
-// controls the secondary sidebar to the right
+//if there is a sidebar controls the secondary sidebar to the right
 #secondary.widget-area{
     float:right;
-    width:25%;
+	width:25%;
+	border:2px solid blue;
 }
