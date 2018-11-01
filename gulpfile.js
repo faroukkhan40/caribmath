@@ -32,9 +32,11 @@ gulp.task('browserSync', function() {
 // Watch everything
 gulp.task('watch',['browserSync','sass'], function() {
 	
-	gulp.watch('CaribMathAcdmy/sass/**/*.scss',['sass']);
+    gulp.watch('CaribMathAcdmy/sass/**/*.scss',['sass']);
+    gulp.watch(root + '**/*').on('change', browserSync.reload);
 	
 });
 
 // Watch everything
 gulp.task('default',['browserSync','sass','watch']);
+

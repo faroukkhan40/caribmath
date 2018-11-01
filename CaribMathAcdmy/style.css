@@ -359,8 +359,7 @@ textarea {
   line-height: 1.5; }
 
 h1, h2, h3, h4, h5, h6 {
-  clear: both;
-  background-color: black; }
+  clear: both; }
 
 p {
   margin-bottom: 1.5em;
@@ -401,51 +400,6 @@ mark, ins {
 
 big {
   font-size: 125%; }
-
-/*
- * Theme Name: CaribbeanMathAcademy
- *
- * Layout: Sidebar-Content Sidear to the Left/Right
- *
- * Learn more: https://developer.wordpress.org/themes/basics/template-files/
-*/
-.site-content {
-  width: 100%; }
-
-.content-area {
-  float: right;
-  margin: 0 0 0 -25%;
-  width: 100%; }
-
-.site-main {
-  margin: 0 0 0 25%;
-  overflow: hidden; }
-
-#primary.content-area {
-  float: left;
-  width: 75%; }
-
-.site-content .widget-area {
-  float: left;
-  overflow: hidden;
-  width: 25%; }
-
-.site-footer {
-  clear: both;
-  width: 100%; }
-
-.no-sidebar .content-area {
-  float: none;
-  margin-left: auto;
-  margin-right: auto; }
-
-.no-sidebar.site-main {
-  margin-right: 0; }
-
-#secondary.widget-area {
-  float: right;
-  width: 25%;
-  border: 2px solid blue; }
 
 /*--------------------------------------------------------------
 # Elements
@@ -501,10 +455,6 @@ figure {
   margin: 1em 0;
   /* Extra wide images within figure tags don't overflow the content area. */ }
 
-table {
-  margin: 0 0 1.5em;
-  width: 100%; }
-
 /*--------------------------------------------------------------
 # Forms
 --------------------------------------------------------------*/
@@ -534,50 +484,6 @@ input[type="submit"] {
   input[type="submit"]:active,
   input[type="submit"]:focus {
     border-color: #aaa #bbb #bbb; }
-
-input[type="text"],
-input[type="email"],
-input[type="url"],
-input[type="password"],
-input[type="search"],
-input[type="number"],
-input[type="tel"],
-input[type="range"],
-input[type="date"],
-input[type="month"],
-input[type="week"],
-input[type="time"],
-input[type="datetime"],
-input[type="datetime-local"],
-input[type="color"],
-textarea {
-  color: #666;
-  border: 1px solid #ccc;
-  border-radius: 3px;
-  padding: 3px; }
-  input[type="text"]:focus,
-  input[type="email"]:focus,
-  input[type="url"]:focus,
-  input[type="password"]:focus,
-  input[type="search"]:focus,
-  input[type="number"]:focus,
-  input[type="tel"]:focus,
-  input[type="range"]:focus,
-  input[type="date"]:focus,
-  input[type="month"]:focus,
-  input[type="week"]:focus,
-  input[type="time"]:focus,
-  input[type="datetime"]:focus,
-  input[type="datetime-local"]:focus,
-  input[type="color"]:focus,
-  textarea:focus {
-    color: #111; }
-
-select {
-  border: 1px solid #ccc; }
-
-textarea {
-  width: 100%; }
 
 /*--------------------------------------------------------------
 # Navigation
@@ -795,7 +701,70 @@ a {
     max-width: 100%; }
 
 .widget-title {
-  color: purple; }
+  color: purple;
+  background: #ddd2d2;
+  font-size: 1em; }
+
+/*--------------------------------------------------------------
+## content has sidebar
+--------------------------------------------------------------*/
+/*
+ * Theme Name: CaribbeanMathAcademy
+ *
+ * Layout: Sidebar-Content Sidear to the Left/Right
+ *
+ * Learn more: https://developer.wordpress.org/themes/basics/template-files/
+*/
+.site-content {
+  width: 100%; }
+
+.content-area {
+  float: right;
+  width: 100%; }
+
+.site-main {
+  margin: 0 0 0 25%;
+  overflow: hidden; }
+
+#primary.content-area {
+  float: left;
+  width: 75%; }
+
+.site-content .widget-area {
+  float: left;
+  overflow: hidden;
+  width: 25%; }
+
+.site-footer {
+  clear: both;
+  width: 100%; }
+
+.no-sidebar .content-area {
+  float: none;
+  margin-left: auto;
+  margin-right: auto; }
+
+.no-sidebar.site-main {
+  margin-right: 0; }
+
+#secondary.widget-area {
+  width: 100%;
+  text-align: center;
+  border: 2px solid blue; }
+
+/*--------------------------------------------------------------
+# Widgets
+--------------------------------------------------------------*/
+.widget {
+  margin: 0 0 1.5em;
+  /* Make sure select elements fit in widgets. textwidget*/ }
+  .widget select {
+    max-width: 100%; }
+
+.widget-title {
+  color: purple;
+  background: #ddd2d2;
+  font-size: 1em; }
 
 /*--------------------------------------------------------------
 # Gloal layouts
@@ -806,11 +775,40 @@ a {
     .site-content {
       padding: 2em; } }
 
-/* $size__max-width: 1080px max-width: $size__max-width;*/
+/* $size__max-width: 1080px max-width: $size__max-width;query_medium 900px*/
 .site-content {
   margin: 0 auto; }
 
-/* Single posts */
+@media screen and (min-width: 48em) {
+  /* Typography */
+  body,
+  button,
+  input,
+  select,
+  textarea {
+    font-size: 16px;
+    font-size: 1rem;
+    line-height: 1.5; }
+  .wrap {
+    max-width: 1000px;
+    padding-left: 3em;
+    padding-right: 3em; }
+  #primary.content-area {
+    float: left;
+    width: 40%; }
+  #secondary.widget-area {
+    float: right;
+    padding-top: 0;
+    width: 36%;
+    clear: both; }
+  /* Widgets */
+  h2.widget-title {
+    font-size: 11px;
+    font-size: 0.6875rem;
+    margin-bottom: 2em; } }
+
+/* Single posts query_medium 900px
+ $size__ratio-small: 30%; */
 @media screen and (min-width: 900px) {
   .single.has-sidebar .hentry,
   .page .hentry {
@@ -840,18 +838,6 @@ a {
       width: 20%; }
     .single.no-sidebar .post-content__wrap .post-content__body {
       width: 70%; } }
-
-/*--------------------------------------------------------------
-# Widgets
---------------------------------------------------------------*/
-.widget {
-  margin: 0 0 1.5em;
-  /* Make sure select elements fit in widgets. textwidget*/ }
-  .widget select {
-    max-width: 100%; }
-
-.widget-title {
-  color: purple; }
 
 /*--------------------------------------------------------------
 # Infinite scroll
@@ -902,34 +888,3 @@ object {
 
 .wp-caption-text {
   text-align: center; }
-
-/*--------------------------------------------------------------
-## Galleries
---------------------------------------------------------------*/
-.gallery {
-  margin-bottom: 1.5em; }
-
-.gallery-item {
-  display: inline-block;
-  text-align: center;
-  vertical-align: top;
-  width: 100%; }
-  .gallery-columns-2 .gallery-item {
-    max-width: 50%; }
-  .gallery-columns-3 .gallery-item {
-    max-width: 33.33%; }
-  .gallery-columns-4 .gallery-item {
-    max-width: 25%; }
-  .gallery-columns-5 .gallery-item {
-    max-width: 20%; }
-  .gallery-columns-6 .gallery-item {
-    max-width: 16.66%; }
-  .gallery-columns-7 .gallery-item {
-    max-width: 14.28%; }
-  .gallery-columns-8 .gallery-item {
-    max-width: 12.5%; }
-  .gallery-columns-9 .gallery-item {
-    max-width: 11.11%; }
-
-.gallery-caption {
-  display: block; }

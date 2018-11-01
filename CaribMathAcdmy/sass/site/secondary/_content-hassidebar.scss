@@ -12,8 +12,7 @@
 }
 
 .content-area {
-	float: right;
-	margin: 0 0 0 -25%;
+	float: right;	
 	width: 100%;
 }
 .site-main {
@@ -47,7 +46,7 @@
 }
 //if there is a sidebar controls the secondary sidebar to the right
 #secondary.widget-area{
-    float:right;
-	width:25%;
+	width:100%;
+	text-align: center;
 	border:2px solid blue;
 }
