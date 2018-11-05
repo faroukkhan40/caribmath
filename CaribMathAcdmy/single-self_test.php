@@ -10,7 +10,7 @@
 get_header();
 ?>
 
-	<div id="primary" class="content-area" style="border:2px solid purple;width:70%;float:left;clear:both;margin:2px;">
+	<div id="primary" class="content-area" style="border:2px solid purple;">
 		<main id="main" class="site-main">
              single-self_test.php
 		<?php
@@ -30,6 +30,6 @@ get_header();
 	
 <?php
 	
-get_sidebar();
+get_sidebar('sidebar-selftest');
 get_footer();
 ?>

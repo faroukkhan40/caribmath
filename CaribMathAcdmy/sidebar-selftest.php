@@ -7,11 +7,11 @@
  * @package CaribbeanMathAcademy
  */
 
-if ( ! is_active_sidebar( 'sidebar-1' ) ) {
+if ( ! is_active_sidebar( 'self-test' ) ) {
 	return;
 }
 ?>
 
-<aside id="secondary" class="widget-area" style="border:2px solid red;">
-	<?php dynamic_sidebar( 'sidebar-1' ); ?>
+<aside id="secondar" class="widget-area selftest-sidebar" style="border:2px solid red;">
+	<?php dynamic_sidebar( 'self-test' ); ?>
 </aside><!-- #secondary -->

@@ -1,17 +1,26 @@
+
+
+//default padding on site-content
 .site-content {
 	padding: 1em;
 	
-	//$query__small: 600px;
-	@media screen and (min-width: $query__small) {
+	//$query__small: 600px; when resizes to 768px change padding to 2em
+	//Media query inside a style rule
+	
+	@media screen and (min-width: 48em) {
 		padding: 2em;
 	}
 }
 
-/* $size__max-width: 1080px max-width: $size__max-width;query_medium 900px*/
+/* $size__max-width: 1080px max-width: $size__max-width;query_medium 900px
+site-content is the parent container want to  give it a max-width of 1080px*/
 .site-content {	
-	margin: 0 auto;
-}
+	margin: 0 auto;	
+	max-width: 1280px; //1080
 
+	
+}
+/* when the screen size reaches (48em =768px)as pre 2016 theme these typography styles will kick in as per wordpress.org*/
 @media screen and (min-width: 48em) {
 /* Typography */
 
@@ -32,37 +41,49 @@
 			padding-left: 3em;
 			padding-right: 3em;
 		}
-	
+		//parent container displays flex default flex-direction row can change to column
+		.site-content{
+			 display:flex;
+			 flex-direction:row;
+			 justify-content: space-between;
+		 }
 
+		//child container to site-content
 		 #primary.content-area {
-			float: left;
-			width: 40%;
+			flex-wrap: wrap;
+			width: 26%;
 		}
-	
-		 #secondary.widget-area {
-			float: right;
-			padding-top: 0;
-			width: 36%;	
-			clear:both;
-        }
+	    //child container to site-content
+		#secondary.widget-area.selftest {
+			padding-top: 0;				
+			flex-wrap: wrap;
+			margin-left: 0;
+	     	width: 26%;
+
+		}
+		
+		
         /* Widgets */
 
 	h2.widget-title {
-		font-size: 11px;
-		font-size: 0.6875rem;
+		font-size: 16px;
+		font-size: 1rem;
 		margin-bottom: 2em;
+		width:100%;
+		text-align: center;
+		color:$color__link-visited;
 	}
 
 	
 
-}
+}// end @media screen and (min-width: 48em) 
 
 
 
 
 /* Single posts query_medium 900px
  $size__ratio-small: 30%; */
-@media screen and (min-width: $query__medium) {
+@media screen and (min-width: 1120px) {
 	.single.has-sidebar,
 	.page {
 
@@ -86,7 +107,19 @@
 		}
 
 	}
-	
+	#primary.content-area {
+		float: left;
+		max-width: 820%;
+	}
+	#secondary.widget-area {
+		float: left;
+		padding-top: 0;
+		max-width: 250%;	
+		
+	}
+
+
+
 	.page {
 		&.has-page-sidebar {
 			.hentry {

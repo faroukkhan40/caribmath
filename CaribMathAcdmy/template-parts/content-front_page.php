@@ -22,9 +22,8 @@
        <!----------------------------------- Page-content------------------------------------- -->
        <!-------------------------------------contains 3 custom widgetize areas------------------------------------------------ -->
             <div class="entry-content">
-			    <ul>
-				   <li style="float:left;clear:both;">	
-				        <div class= "site-content.widget-area">
+			    
+				        <div class= "widget-area">
 
 									<?php if ( is_active_sidebar( 'self-test' ) ) : ?>
 									<div id="primary-sidebar" class="primary-sidebar widget-area" role="complementary">
@@ -33,11 +32,11 @@
 									<?php endif; ?>
 
 							</div><!-- .widget-area -->	
-				  </li>	
+				 	
 
 
-				   <li style="float:right;margin:25px;">		
-							<div class= "site-content.widget-area">
+				   		
+							<div class= "widget-area">
 
 									<?php if ( is_active_sidebar( 'past-papers' ) ) : ?>
 										<div id="primary-sidebar" class="primary-sidebar widget-area" role="complementary">
@@ -46,10 +45,10 @@
 									<?php endif; ?>
 
 							</div><!-- .widget-area -->
-				 </li>	
+				 	
 							
-				  <li style="float:right;">		
-							<div class= "site-content.widget-area">
+				  		
+							<div class= "widget-area">
 
 									<?php if ( is_active_sidebar( 'video-lessons' ) ) : ?>
 										<div id="primary-sidebar" class="primary-sidebar widget-area" role="complementary">
@@ -58,11 +57,11 @@
 									<?php endif; ?>
 
 							</div><!-- .widget-area -->
-				 </li>	
+				 	
 
 							
 
-           </ul>
+           
     	   </div><!-- .End entry-content -->
 
 

@@ -1,5 +1,6 @@
 .widget {
 	margin: 0 0 1.5em;
+	background: #3f3c3c
 
 	/* Make sure select elements fit in widgets. textwidget*/
 	select {
@@ -12,4 +13,9 @@
 	 color:$color__link-visited;
 	 background: #ddd2d2;
 	 font-size: 1em;
+}
+.widget-area{
+	
+	background:#d9d9d9;
+	
 }

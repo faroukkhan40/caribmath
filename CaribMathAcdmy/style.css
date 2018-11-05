@@ -696,14 +696,16 @@ a {
 --------------------------------------------------------------*/
 .widget {
   margin: 0 0 1.5em;
-  /* Make sure select elements fit in widgets. textwidget*/ }
-  .widget select {
-    max-width: 100%; }
+  background: #3f3c3c select;
+    background-max-width: 100%; }
 
 .widget-title {
   color: purple;
   background: #ddd2d2;
   font-size: 1em; }
+
+.widget-area {
+  background: #d9d9d9; }
 
 /*--------------------------------------------------------------
 ## content has sidebar
@@ -757,28 +759,33 @@ a {
 --------------------------------------------------------------*/
 .widget {
   margin: 0 0 1.5em;
-  /* Make sure select elements fit in widgets. textwidget*/ }
-  .widget select {
-    max-width: 100%; }
+  background: #3f3c3c select;
+    background-max-width: 100%; }
 
 .widget-title {
   color: purple;
   background: #ddd2d2;
   font-size: 1em; }
 
+.widget-area {
+  background: #d9d9d9; }
+
 /*--------------------------------------------------------------
 # Gloal layouts
 --------------------------------------------------------------*/
 .site-content {
   padding: 1em; }
-  @media screen and (min-width: 600px) {
+  @media screen and (min-width: 48em) {
     .site-content {
       padding: 2em; } }
 
-/* $size__max-width: 1080px max-width: $size__max-width;query_medium 900px*/
+/* $size__max-width: 1080px max-width: $size__max-width;query_medium 900px
+site-content is the parent container want to  give it a max-width of 1080px*/
 .site-content {
-  margin: 0 auto; }
+  margin: 0 auto;
+  max-width: 1280px; }
 
+/* when the screen size reaches (48em =768px)as pre 2016 theme these typography styles will kick in as per wordpress.org*/
 @media screen and (min-width: 48em) {
   /* Typography */
   body,
@@ -793,23 +800,30 @@ a {
     max-width: 1000px;
     padding-left: 3em;
     padding-right: 3em; }
+  .site-content {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between; }
   #primary.content-area {
-    float: left;
-    width: 40%; }
-  #secondary.widget-area {
-    float: right;
+    flex-wrap: wrap;
+    width: 26%; }
+  #secondary.widget-area.selftest {
     padding-top: 0;
-    width: 36%;
-    clear: both; }
+    flex-wrap: wrap;
+    margin-left: 0;
+    width: 26%; }
   /* Widgets */
   h2.widget-title {
-    font-size: 11px;
-    font-size: 0.6875rem;
-    margin-bottom: 2em; } }
+    font-size: 16px;
+    font-size: 1rem;
+    margin-bottom: 2em;
+    width: 100%;
+    text-align: center;
+    color: purple; } }
 
 /* Single posts query_medium 900px
  $size__ratio-small: 30%; */
-@media screen and (min-width: 900px) {
+@media screen and (min-width: 1120px) {
   .single.has-sidebar .hentry,
   .page .hentry {
     display: flex;
@@ -825,6 +839,13 @@ a {
     .single.has-sidebar .hentry .widget-area,
     .page .hentry .widget-area {
       width: 30%; }
+  #primary.content-area {
+    float: left;
+    max-width: 820%; }
+  #secondary.widget-area {
+    float: left;
+    padding-top: 0;
+    max-width: 250%; }
   .page.has-page-sidebar .hentry {
     flex-direction: row-reverse; }
   .page:not(.has-page-sidebar) .hentry {
