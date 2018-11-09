@@ -29,7 +29,6 @@ get_header();
 	</div><!-- #primary -->
 	
 <?php
-	
-get_sidebar('sidebar-selftest');
+get_sidebar('selftest');
 get_footer();
 ?>
