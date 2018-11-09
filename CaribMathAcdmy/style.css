@@ -805,11 +805,9 @@ site-content is the parent container want to  give it a max-width of 1080px*/
     flex-direction: row;
     justify-content: space-between; }
   #primary.content-area {
-    flex-wrap: wrap;
-    width: 26%; }
-  #secondary.widget-area.selftest {
+    width: 70%; }
+  #secondary.widget-area.selftest-sidebar {
     padding-top: 0;
-    flex-wrap: wrap;
     margin-left: 0;
     width: 26%; }
   /* Widgets */

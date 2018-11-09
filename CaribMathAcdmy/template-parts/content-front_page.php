@@ -11,17 +11,18 @@
 
 		
        <!--------------------------------------------Page-header------------------------------ -->
-			<header class="page-header">
-				<?php
-				the_archive_title( '<h1 class="page-title">', '</h1>' );
-				the_archive_description( '<div class="archive-description">', '</div>' );
-				?>
+			<header class="page-header" style='border:2px solid red'>
+				this is entry header
+				
+				  <h2>increase tthat grade  get the 1 your deserves</h2>
+				  
+				  <?php ?>
 			</header><!-- .page-header -->
 
 
        <!----------------------------------- Page-content------------------------------------- -->
        <!-------------------------------------contains 3 custom widgetize areas------------------------------------------------ -->
-            <div class="entry-content">
+            <div class="entry-content" style='border:2px solid blue'>
 			    
 				        <div class= "widget-area">
 
@@ -50,6 +51,9 @@
 				  		
 							<div class= "widget-area">
 
+									
+									
+									
 									<?php if ( is_active_sidebar( 'video-lessons' ) ) : ?>
 										<div id="primary-sidebar" class="primary-sidebar widget-area" role="complementary">
 											<?php dynamic_sidebar( 'video-lessons' ); ?>
@@ -67,7 +71,12 @@
 
 		<!----------------------------------- Page-footer------------------------------------- -->
         <!----------------------------------- ------------------------------------------------ -->
-           <footer class="entry-footer">
+           <footer class="entry-footer"style='border:2px solid green' >
+			      this is entry footer
+			
+				 <h2 style="color:;font-size:20px;"> 150,000+ students watch 1,000,000+ video lessons every year
+               Making LearnCoach the most trusted & popular tutorial provider in New Zealand</h2>
+			
 			<?php
 			edit_post_link(
 				sprintf(

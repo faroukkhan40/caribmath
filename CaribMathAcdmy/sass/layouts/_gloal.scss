@@ -41,7 +41,7 @@ site-content is the parent container want to  give it a max-width of 1080px*/
 			padding-left: 3em;
 			padding-right: 3em;
 		}
-		//parent container displays flex default flex-direction row can change to column
+		//parent container for primary and secondary: displays flex default flex-direction row can change to column
 		.site-content{
 			 display:flex;
 			 flex-direction:row;
@@ -50,13 +50,11 @@ site-content is the parent container want to  give it a max-width of 1080px*/
 
 		//child container to site-content
 		 #primary.content-area {
-			flex-wrap: wrap;
-			width: 26%;
+			width: 70%;
 		}
 	    //child container to site-content
-		#secondary.widget-area.selftest {
+		#secondary.widget-area.selftest-sidebar{
 			padding-top: 0;				
-			flex-wrap: wrap;
 			margin-left: 0;
 	     	width: 26%;
 

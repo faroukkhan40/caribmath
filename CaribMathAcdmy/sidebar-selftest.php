@@ -12,6 +12,6 @@ if ( ! is_active_sidebar( 'self-test' ) ) {
 }
 ?>
 
-<aside id="selftest-secondary" class="widget-area selftest-sidebar" style="border:2px solid blue;">
+<aside id="secondary" class="widget-area selftest-sidebar" style="border:2px solid blue;">
 	<?php dynamic_sidebar( 'self-test' ); ?>
 </aside><!-- #secondary -->
