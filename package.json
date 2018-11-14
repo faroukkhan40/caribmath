@@ -1,14 +1,25 @@
 {
-  "name": "mathacdy",
+  "name": "caribmat3rdnov2018",
   "version": "1.0.0",
-  "description": "math site",
+  "description": "carib math academy",
   "main": "index.js",
-  "author": "Farouk Khan",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/faroukkhan40/caribmath.git"
+  },
+  "author": "Farook Khan",
   "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/faroukkhan40/caribmath/issues"
+  },
+  "homepage": "https://github.com/faroukkhan40/caribmath#readme",
   
   "devDependencies": {
-    "browser-sync": "^2.24.7",
+    "browser-sync": "^2.26.3",
     "gulp": "^3.9.1",
-    "gulp-sass": "^4.0.1"
+    "gulp-sass": "^4.0.2"
   }
 }
