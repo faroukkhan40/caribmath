@@ -35,6 +35,4 @@ gulp.task('serve', ['sass'], function() {
     gulp.watch("caribmat3rdNov2018/*.html").on('change', browserSync.reload);
 });
 
-// Default Task
-gulp.task('default', ['serve']);
 
