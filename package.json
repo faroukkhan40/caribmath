@@ -16,10 +16,10 @@
     "url": "https://github.com/faroukkhan40/caribmath/issues"
   },
   "homepage": "https://github.com/faroukkhan40/caribmath#readme",
-  
   "devDependencies": {
     "browser-sync": "^2.26.3",
     "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^6.0.0",
     "gulp-sass": "^4.0.2"
   }
 }
