@@ -12,27 +12,35 @@ const browserSync  = require('browser-sync').create();
 const sass         = require('gulp-sass');
 const autoprefixer = require('gulp-autoprefixer');
 
-// Compile Sass & Inject Into Browser
-gulp.task('sass', function() {
-    return gulp.src(['caribmat3rdNov2018/scss/*.scss'])
-        .pipe(sass())
-        .pipe(autoprefixer({
-            browsers: ['last 2 versions'],
-            cascade: false
-        }))
-        .pipe(gulp.dest("caribmat3rdNov2018/style.css"))
+// start browserSync sync
+gulp.task('browserSync', function() {
+	browserSync.init({ 
+		
+        proxy: 'http://localhost/wordpress/',
+        
+                  });
+    });
+    
+    // compiling sass to the style.css
+    gulp.task('sass', function() {   
+        gulp.src('caribmat3rdNov2018/sass/**/*.scss')
+        .pipe(sass().on('error', sass.logError))
+        .pipe(gulp.dest('caribmat3rdNov2018'))
         .pipe(browserSync.stream());
 });
 
-
-// Watch Sass & Serve
-gulp.task('serve', ['sass'], function() {
-    browserSync.init({
-        proxy: 'http://localhost/wordpress/', 
-    });
-
-    gulp.watch(['caribmat3rdNov2018/scss/*.scss'], ['sass']);
+// Watch everything
+gulp.task('watch',['browserSync','sass'], function() {
+	
+    gulp.watch('caribmat3rdNov2018/sass/**/*.scss',['sass']);
     gulp.watch("caribmat3rdNov2018/*.html").on('change', browserSync.reload);
+    gulp.watch(root + '**/*').on('change', browserSync.reload);
+	
 });
+
+// Watch everything
+gulp.task('default',['browserSync','sass','watch']);
+
+
 
 
