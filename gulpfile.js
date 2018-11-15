@@ -20,7 +20,7 @@ gulp.task('sass', function() {
             browsers: ['last 2 versions'],
             cascade: false
         }))
-        .pipe(gulp.dest("caribmat3rdNov2018/css"))
+        .pipe(gulp.dest("caribmat3rdNov2018/style.css"))
         .pipe(browserSync.stream());
 });
 
@@ -28,7 +28,7 @@ gulp.task('sass', function() {
 // Watch Sass & Serve
 gulp.task('serve', ['sass'], function() {
     browserSync.init({
-        server: "./caribmat3rdNov2018"  
+        proxy: 'http://localhost/wordpress/', 
     });
 
     gulp.watch(['caribmat3rdNov2018/scss/*.scss'], ['sass']);
@@ -37,3 +37,4 @@ gulp.task('serve', ['sass'], function() {
 
 // Default Task
 gulp.task('default', ['serve']);
+
